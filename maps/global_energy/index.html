@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The Global Energy and Renewables Map is an interactive web map which allows visitors to explore renewable and thermal power plant facilities around the world." />
+
+    <title>Global Energy and Renewables Map</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="./layers/Green Light Geospatial Icon.png" />
+    
+    
+
+    <script type="module" crossorigin src="/ol-maps/assets/index-24f92b80.js"></script>
+    <link rel="stylesheet" href="/ol-maps/assets/index-055d5922.css">
+  </head>
+  
+  <body>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+          <div class="modal-header">
+              <span class="close" id="modalClose">&times;</span>
+              <h2 class="modal-title">Welcome to the Global Energy and Renewables Map</h2>
+          </div>
+          <div class="modal-body">
+              <p>Click the Help button again or the "X" button on the top right 
+                to close this window at any time.<br><br>               
+                This web map will allow you to explore global power plants and U.S. renewable energy facilities 
+                using text search and map visualization tools.<br><br> 
+                <b>Please Note:</b>  If you are using a mobile phone, it is best to view this page in landscape mode
+                to fully view the map tool panel and for better overall viewing of the map and this Help window.
+                Also, it is recommended that you use this map on a tablet or laptop for best performance and visualization.
+ <br>
+ <p><b>Legend:</b></p> 
+ <img src="./layers/Legend - Global Energy and Renewables Map.png" width="471" height="318" alt="Map Legend">
+
+              <h4>Data Layers:</h4>
+                <ul>
+                  <li><b>Global Power Plants Layer --</b> Point features from the Global Power Plant Database representing both thermal and
+                    renewable energy power plants around the world. </li>
+                    <p>Popup attributes list:</p>
+                    <ul>
+                      <li>name:  power plant name</li>
+                        <li>fid:  feature id</li>
+                          <li>country:  country abbreviation</li>
+                            <li>country_long:  country full name</li>
+                              <li>capacity_mw:  capacity in megawatts</li>
+                                <li>latitude:  latitude coordinate</li>
+                                  <li>longitude: longitude coordinate</li>
+                                    <li>primary_fuel:  energy source used in primary electricity generation</li>
+                                      <li>commission_year: year of plant operation, if available</li>
+                  </ul><br>
+
+                 <li><b>U.S. Solar Facilities Layer --</b> Polygon features from the U.S. Large-Scale Solar Photovoltaic Database (USPVDB).</li>
+                 <p>Popup attributes list:</p>
+                 <ul>
+                  <li>p_name:  project name</li>
+                    <li>p_state:  state abbreviation</li>
+                      <li>p_county:  county name</li>
+                        <li> p_area:  area of the facility array(s) in square meters</li>
+                          <li>p_img_date:  acquisition date  of the aerial image used to confirm the facility location in yyyymmdd format</li>
+                            <li>p_year:  year in which facility operation began</li>
+                              <li>p_pwr_reg:  common abbreviation of regional power authority name</li>
+                                <li>p_tech_pri:  electric generation technology type (e.g., PV)</li>
+                                  <li>p_axis:  array axis type (e.g., single axis)</li>
+                                    <li>p_cap_ac:  facility capacity in megawatts AC (Alternating Current)</li>
+                                      <li>p_cap_dc:  facility capacity in megawatts DC (Direct Current)</li>
+                                        <li>p_type:  general categorization of facility from the EPA’s RE-Powering Matrix</li>
+                 </ul><br>
+                 <li><b>U.S. Wind Turbines Layer --</b> Point features from the U.S. Wind Turbine Database (USWTDB).</li>
+                 <p>Popup attributes list:</p>
+                 <ul>
+                  <li>p_name: project name</li>
+                    <li>case_id: unique uswtdb id</li>
+                      <li>t_state: state abbreviation</li>
+                        <li>p_year: year project became operational</li>
+                          <li>p_tnum: number of turbines in project</li>
+                            <li>p_cap: project capacity in megawatts</li>
+                              <li>t_manu: turbine original equipment manufacturer</li>
+                                <li>t_model: turbine model</li>
+                                  <li>t_cap: turbine capacity in kilowatts</li>
+                                    <li>xlong: longitude coordinate</li>
+                                      <li>ylat: latitude coordinate</li>
+                </ul>
+                </ul>
+
+                <h4>Exploring the map:</h4>
+                <ul>
+               <li><b>Pan and Zoom --</b> This map works like other online web maps. If you are on a mobile device or laptop, use touch to drag and 
+                pan and pinch to zoom in and out.  If using a mouse, use your scroll wheel to zoom in and out, and pan around with click and drag.
+                 You can also use the Zoom Tool described below to zoom to a specified area.</li>
+              <li><b>Identify features --</b> Use the Click or Hover Popups tools described below to open a popup with information on features of the three data layers. 
+                Note that popups will dynamically autopan the map as needed to display the popup fully on the map.</li>
+                <li><b>Overview Map --</b> In the top-right corner of the map there is a button to expand and collapse an overview map.  As you explore locations, the overview
+                  will update and show you your current location zoomed-out at a smaller scale. The overview's red rectangle shows the extent of the current map view.</li>
+                <li><b>Zoom In/Out --</b> In the bottom-right corner of the map, there are standard map zoom control "+/-" buttons.</li>
+                </ul>
+                <h4>The Map Tools Panel:</h4>
+                On the top left of the map is the tools panel. 
+                Here are descriptions of each of the tools:<br>
+                <ul>
+                <li><b>Title bar button --</b> Click to expand or collapse the tool panel when exploring the map.</li>
+                <li><b>Help button --</b> Click to open/close this Help window for reference when needed.</li>
+                <li><b>Sample Searches --</b> Click to choose a text search to run on one of the three layers. 
+                  When mulitiple features are selected the map will zoom to their extent, and the number of selected features
+                  will show in the Selection box.  You can then pan and zoom and explore the selected features, and also press the 'Tour' button
+                to zoom to each selected site individually.</li>
+                <li><b>Search bar --</b> Enter search text to find power facilities of interest. Searches are global on all attributes for a specific layer. Choose the field you would like to search on
+                  from the Search Layer list. Press Enter or the Search button to run your search.</li>
+                <li><b>Search button --</b> Runs your search with the text you've entered. You can press Enter on a keyboard if you prefer.</li>
+                <li><b>Search Layer picklist --</b> Choose the layer you would like to search on -- Global Energy, USA Solar and USA Wind.</li>
+                <li><b>Selection box --</b> If features are selected from your search, the Selection box will turn green and display the
+                  number of selected features.  When using the Tour button, the Selection box will display which feature number from the total returned selection
+                  you are currently viewing.</li>
+                <li><b>Tour --</b> When the Selection box displays more than 1 feature is returned from your selection, you can use the Tour button
+                  to zoom into each of the returned selected features individually. Tour moves forward through the selected records.</li>
+                <li><b>Back --</b> The Back button is similar to the Tour button above, but moves backward through the selected records zooming into each.</li>
+                <li><b>Zoom --</b> Click the Zoom button to zoom to the map extent of the currently selected feature(s).</li>
+                <li><b>Home --</b> Click to zoom out to the full extent of the world map.</li>
+                <li><b>Zoom to Previous (left arrow) --</b> Zooms to the previous map extent in the order which you have previously visited.</li>
+                <li><b>Zoom to Next (right arrow) --</b> Zooms back to the next map extent in the order which you visited.</li>
+                <li><b>Zoom Tool --</b> Click to activate the tool which will turn green. Use the tool to click and drag a rectangle on the map.
+                  The map will zoom to the extent of the box. Click the button again to deactivate and it will turn back to gray.</li>
+                <li><b>Click Popups --</b> Use this tool to click and select a single features and open a popup with information. As Click allows you to lock the popup,
+                  the popup includes a link you can click to open a tab with the feature's location in Google Maps satellite view.</li>
+                <li><b>Hover Popups --</b> Use this tool to hover your cursor over features and desplay popups as you move over features. This is good for quickly exploring many areas
+                  Note that popups will dynamically autopan the map as needed to display the popup.</li> 
+                <li><b>Layer visibility checkboxes --</b> Below the tools are checkboxes for each of the three data layers which allow you turn layer visibility on/off as needed when exploring.</li>
+                </ul>
+                <h4>Further Information</h4>
+                <p>At the bottom of the tool panel are three information buttons.</p>
+                <ul>
+                <li><b>Map Info --</b> Learn more about this web map and find links to resources.</li>
+                <li><b>USGS --</b> Go to the USGS web site.</li> 
+                <li><b>Feedback --</b> Send feedback on this map.</li> 
+                </ul>
+                <p>Thank you for visiting, and hope you enjoy exploring and learning more about these datasets.</p>
+                <h4>Special Thanks</h4>
+                <p>Special thanks to the following organizations for making this map possible:</p>
+                <ul>
+                  <li>Thanks to the <b>U.S. Geological Survey and Lawrence Berkeley National Laboratory</b> and partners for sharing open data on the U.S. Solar (USPVDB) and U.S. Wind (USWTDB) database projects.</li>
+                  <li>Thanks to the <b>World Resources Institute</b> and partners for sharing open data on the Global Power Plant Database.</li>
+                  <li>Thanks to <b>OpenStreetMap</b> and its contributors for sharing their important work and open basemap.</li>
+                  <li>Thanks to <b>OpenLayers</b> and its contributors for their free and open source map library on which this map was built.</li>
+                </ul>
+                <br>
+                <p><p style="text-align:center">Green Light Geospatial, 2023</p>
+
+          </div>
+      </div>
+    </div> 
+    
+    <style>
+      img {
+        width: 80%;
+        height: auto;
+        display: block;
+        margin: auto;
+      }
+    </style>
+
+    <div id="map" class="map"></div>
+
+    <!-- For Simple Popup overlay: -->
+    <div id="popup" class="ol-popup">
+      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+      <div id="popup-content"></div>
+    </div>
+
+    <div id="lbl-popup">Text</div>
+    
+    
+
+
+  </body>
+</html>

@@ -1,0 +1,14 @@
+{
+"type": "FeatureCollection",
+"name": "Guardians_of_The_Crossroads_Scenes_by_Robert_Georg",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:EPSG::3857" } },
+"features": [
+{ "type": "Feature", "properties": { "fid": 1, "ID": 2, "Scene": "The Cathedral", "Description": "After leaving work, Hans stops at the Christmas market and then assists the old Cathedral Pastor who is being threatened by dangerous men." }, "geometry": { "type": "Point", "coordinates": [ 862748.529077218030579, 6204166.070925118401647 ] } },
+{ "type": "Feature", "properties": { "fid": 2, "ID": 1, "Scene": "The Print Shop", "Description": "The story begins in December 1804, with young Hans Schumacher finishing work in a print shop. Hans and the print master discuss their special holiday edition of the Rhine Legends and Strasbourg's long printing history." }, "geometry": { "type": "Point", "coordinates": [ 863234.326744944090024, 6204320.308329669758677 ] } },
+{ "type": "Feature", "properties": { "fid": 3, "ID": 3, "Scene": "Old Strasbourg Shop", "Description": "Continuing his walk home from work in the dark, Hans comes across a street of shops and finds 'Old Strasbourg', an antique shop. Out of the shadows, he comes face to face with death." }, "geometry": { "type": "Point", "coordinates": [ 861620.065351274097338, 6204231.216373648494482 ] } },
+{ "type": "Feature", "properties": { "fid": 4, "ID": 6, "Scene": "The Meeting of the Guard", "Description": "Hans attends a meeting of the Royal Guard, a secret society. The meeting hall is hidden within the historic Grande Boucherie building. There, Hans learns about the ancient origins of the Guardians of Strasbourg." }, "geometry": { "type": "Point", "coordinates": [ 862831.496322666062042, 6203890.583902958780527 ] } },
+{ "type": "Feature", "properties": { "fid": 6, "ID": 4, "Scene": "Apartment of Hans and Anna", "Description": "Hans returns home to the apartment where he lives with his mother, Anna. They live a quiet, peaceful life amongst friends and neighbors... until dark forces change their world." }, "geometry": { "type": "Point", "coordinates": [ 861910.686664828914218, 6204461.89713441953063 ] } },
+{ "type": "Feature", "properties": { "fid": 7, "ID": 7, "Scene": "The Citadel of Strasbourg", "Description": "The Officers' Quarters of the Citadel of Strasbourg. Here plans are being made by a treacherous Captain in an alliance with dark and scheming forces. " }, "geometry": { "type": "Point", "coordinates": [ 865264.445152486674488, 6203542.725172433070838 ] } },
+{ "type": "Feature", "properties": { "fid": 8, "ID": 5, "Scene": "The Christmas Market", "Description": "After meeting the shopkeeper of Old Strasbourg, Hans heads to the Christmas Market for sausages, mulled wine and gifts for family and friends." }, "geometry": { "type": "Point", "coordinates": [ 862890.99919904046692, 6204130.786268779076636 ] } }
+]
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.8" />
+    <meta name="description" content="The UNESCO World Heritage Sites Tribute Map is an interactive web map with search tools that allow you to explore and learn about the world heritage sites." />
+
+    <title>UNESCO World Heritage Tribute Map</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="./layers/GreenLightGeospatialIcon.png" />
+    
+    
+
+    <script type="module" crossorigin src="/ol-maps/assets/index-08f97449.js"></script>
+    <link rel="stylesheet" href="/ol-maps/assets/index-edd5f4de.css">
+  </head>
+  
+  <body>
+
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+          <div class="modal-header">
+              <span class="close" id="modalClose">&times;</span>
+              <h2 class="modal-title">Welcome to the UNESCO World Heritage Tribute Map</h2>
+          </div>
+          <div class="modal-body">
+              <p>Here are some instructions to help you get started.  Click the <b>"X"</b> above on the top right 
+                to close this window at any time.<br><br>               
+                This web map is a tribute to the UNESCO World Heritage Sites and will allow you to explore the sites and their locations 
+                using map search and visualization tools.<br><br> 
+                You can also explore the historic center of the city of Vienna, one of the famous cultural sites which UNESCO has classified as in danger.
+                The visualization tools allow you to compare the historic city center as depicted in a map from 1830, with the layout of 
+                today as seen in the underlying OpenStreetMap basemap.<br><br>
+                <b>Please Note:</b>  If you are using a mobile phone, it is best to view this page in landscape mode
+                to fully view the map tool panel and for better overall viewing of the map and this Help window.
+                Also, it is recommended that you use this map on a tablet or laptop for best performance and visualization.
+ <br>
+                <h4>Exploring the map:</h4>
+                <ul>
+               <li><b>Pan and Zoom --</b> This map works like other online web maps. If you are on a mobile device or laptop, use touch to drag and 
+                pan and pinch to zoom in and out. 
+                If using a mouse, use your scroll wheel to zoom in and out, and pan around with click and drag.</li>
+              <li><b>Identify features --</b> Click on the blue World Heritage Site points to identify features on the map. 
+                When you click on the feature, it will be selected in green and a popup window will appear with UNESCO information on the site --
+                its name, country, category and description. The popup will also provide you a link to view further information on the site at the
+                offical UNESCO page, and also a link to open the site location in Google Maps.</li>
+                <li><b>Overview Map --</b> In the top-right corner of the map there is a button to expand and collapse an overview map.  As you explore sites, the overview
+                  will update and show you your current location zoomed-out at a smaller scale. The overview's red rectangle shows the extent of the current map view.</li>
+                <li><b>Zoom In/Out --</b> In the bottom-right corner of the map, there are standard map zoom control "+/-" buttons.</li>
+                </ul>
+                <h4>The Map Tools Panel:</h4>
+                On the top left of the map is the tools panel with blue and white background. 
+                Here are descriptions of each of the tools:<br>
+                <ul>
+                <li><b>Title bar button --</b> Click to expand or collapse the tool panel when exploring the map.</li>
+                <li><b>Help button --</b> Click to open this Help window for reference when needed.</li>
+                <li><b>Explore World Heritage Site locations --</b> Click to choose one of the heritage site category selection options -- Cultural, Mixed or Natural, as well as the sites in those categories which are in danger.
+                  The selected site features will then turn green and the map will zoom to their extent, and the number of selected features
+                  will show in the Selection box.  You can then pan and zoom and explore the selected sites, and also press the 'Next' button
+                to zoom to each selected site individually.</li>
+                <li><b>Search bar --</b> Enter search text to find heritage sites of interest. Then choose the field you would like to search on
+                  from the Search field list -- options are Name (default), Country or Description. Press Enter or the Search button to run your search.</li>
+                <li><b>Search button --</b> Runs your search with the text you've entered. You can press Enter on a keyboard if you prefer.</li>
+                <li><b>Search field picklist --</b> choose the field you would like to search on -- options are Name (default), Country or Description.</li>
+                <li><b>Selection box --</b> If site features are selected from your search, the Selection box will turn green and display the
+                  number of selected features.  When using the Next button, the Selection box will display which site number from the total returned selection
+                  you are currently viewing.</li>
+                <li><b>Tour --</b> When the Selection box displays more than 1 site is returned from your selection, you can use the Tour button
+                  to zoom into each of the returned selected sites individually. Tour moves forward through the selected records.</li>
+                <li><b>Back --</b> The Back button is similar to the Tour button above, but moves backward through the selected records, zooming into each individually.</li>
+                <li><b>Zoom --</b> Click to zoom out to the full extent of the selected feature(s).</li>
+                <li><b>Home --</b> Click to zoom out to the full extent of the map.</li>
+                <li><b>Zoom to Previous --</b> Zooms to the previous map extent in the order which you have previously visited.</li>
+                <li><b>Zoom to Next --</b> Zooms back to the next map extent in the order which you visited.</li>
+                <li><b>Visit Historic Vienna --</b> Click to zoom to the historic center of the city of Vienna, one of the cultural sites 
+                  which UNESCO has classified as in danger. You can then use the Swipe and Opacity visualization tools to 
+                compare the historic city center as depicted in a map from 1830, with the layout of 
+                  today as seen in the underlying OpenStreetMap basemap.</li>
+                <li><b>Swipe Tool --</b> Use the swipe tool to adjust the edge of the historic map. The tool allows you to swipe away
+                the historic map to view the present day basemap. Its helpful when you are zoomed in and can compare the outlines of the old 
+                city blocks.</li>
+                <li><b>Adjust Map Opacity --</b> Adjust the historic map opacity and see through to the base map. Like the swipe tool, it's 
+                helpful to use when zoomed in where you can compare at the city block level.</li> 
+                <li><b>Historic map visibility on/off --</b> Use the checkbox to turn the historic map on and off as needed when exploring.</li>
+                </ul>
+                <h4>Further Information</h4>
+                <p>At the bottom of the tool panel are three information buttons.</p>
+                <ul>
+                <li><b>Map Info --</b> Learn more about this web map.</li>
+                <li><b>UNESCO --</b> Go to the UNESCO web site.</li> 
+                <li><b>Feedback --</b> Send feedback on this map.</li> 
+                </ul>
+                <p>Thank you for visiting, and hope you enjoy discovering and learning about UNESCO's World Heritage Sites.</p>
+                <h4>Special Thanks</h4>
+                <p>Special thanks to the following organizations for making this map possible:</p>
+                <ul>
+                  <li>Thanks to <b>UNESCO</b> for sharing open data on its globally important World Heritage Sites.</li>
+                  <li>Thanks to <b>OpenStreetMap</b> and its contributors for sharing their important work and open basemap.</li>
+                  <li>Thanks to <b>OpenLayers</b> and its contributors for an excellent free and open source map library on which this map was built.</li>
+                </ul>
+                <br>
+                <p><p style="text-align:center">Green Light Geospatial, 2023</p>
+
+          </div>
+      </div>
+    </div> 
+    
+
+    <div id="map" class="map"></div>
+
+    <!-- For Simple Popup overlay: -->
+    <div id="popup" class="ol-popup">
+      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+      <div id="popup-content"></div>
+    </div>
+
+    <div id="lbl-popup">Text</div>
+    
+    
+
+
+  </body>
+</html>

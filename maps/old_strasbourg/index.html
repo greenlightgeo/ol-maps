@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="The Historic Strasbourg Live Map is a dynamic web map with visualization tools that allow you to explore the old fortified City and Citadel of Strasbourg." />
+    <title>Historic Strasbourg Live Map</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+     <link rel="icon" type="image/x-icon" href="/ol-maps/maps/old_strasbourg/RGA - Icon2.jpg">   
+    <script type="module" crossorigin src="/ol-maps/assets/index-04387568.js"></script>
+    <link rel="stylesheet" href="/ol-maps/assets/index-c9b7b87a.css">
+  </head>
+  
+  <body>
+    <!-- Larger Welcome - Instructions Modal popup  -->
+    <div id="myModal" class="modal">
+      <div class="modal-content">
+          <div class="modal-header">
+              <span class="close" id="modalClose">&times;</span>
+              <h2 class="modal-title">Welcome to the Historic Strasbourg Live Map</h2>
+          </div>
+          <div class="modal-body">
+              <p>Here are some instructions to help you get started.  Click the <b>"X"</b> above on the top right 
+                to close this window at any time.<br><br>               
+                This web map will allow you to step back into the history of the city of Strasbourg, France. 
+                You will explore a beautiful plan map of the city and citadel of Strasbourg, published in 1800.<br><br>
+                <b>Please Note:</b>  If you are using a mobile phone, it is <b>best</b> to view this page in landscape mode
+                to fully view the map toolbar and for better overall viewing of the map and this welcome page.
+                Also, it is recommended that you try this map on a tablet or laptop for better performance and visualization, 
+                as the map toolbar provides dynamic zoom and animation for exploring the historic map. <br>
+                <h4>Here are the tools you can use to explore the map:</h4>
+                <ul>
+               <li><b>Pan and Zoom --</b> This works like other online web maps. If you are on a mobile device, use touch and drag to pan and 
+                pinch to zoom in and out.
+                If using a mouse with a laptop, use your scroll wheel to zoom in and out, and pan around with click and drag.
+               </li>
+              <li><b>Identify features --</b> Click on the blue and purple points to identify features on the map. 
+                When you click on the feature, it will turn green and a "pop up" will appear with information. 
+                You can click on any blue or purple feature to learn about the location: <br><br></li>
+                <ul>
+                  <li>  <u>Blue features</u> -- There are over 60 features identified using the map's original legend, the information
+                  includes an English translation. </li>
+                  <li>  <u>Purple features</u> -- There is a set of seven story scene locations from the first chapters of the 
+                    historical novel, <i>Guardians of The Crossroads,</i> set in Strasbourg in 1804.</li>
+                </ul>
+                </ul>
+                <h4>Using the tools of the Map Toolbar:</h4>
+                On the top left of the page is your map toolbar with a red and white background. 
+                Red and white are the colors of the flag of Alsace, and the city of Strasbourg 
+                is the capital of the historic Alsace region. <br><br>
+                Here are descriptions of each of the tools:<br>
+                <ul>
+                <li><b>Title bar button --</b> Click to expand or collapse the toolbar when exploring the map.</li>
+                <li><b>Help button --</b> Click to open this welcome / help window for reference if you need it.</li>
+                <li><b>Explore historic map locations --</b> Click to choose from several map feature selection options.
+                  The identified features will be selected in green, briefly highlighted and the map will zoom to the extent
+                  of the selected features.  You can then pan and zoom and explore the map and identify other features.</li>
+                <li><b>Citadel --</b> Click to zoom to Strasbourg's Citadel Park and use the map tools below to compare the locations
+                  of the old bastions which still remain displayed today.</li>
+                <li><b>Scenes --</b> Click to zoom to scene locations from the story, <i>Guardians of The Crossroads.</i> Click through the seven scenes.
+                <li><b>Home --</b> Click to zoom out to the full extent of the historic map.</li>
+                <li><b>Swipe Tool --</b> Use the swipe tool to adjust the edge of the historic map. The tool allows you to swipe away
+                the historic map to view the present day base map. Its helpful when you are zoomed in close to a single feature like the
+                Citadel Park.</li>
+                <li><b>Adjust Map Opacity --</b> Adjust the historic map opacity and see through to the base map. Like the swipe tool, it's 
+                helpful to use when zoomed in close on a feature.</li> 
+                <li><b>Visibility on/off --</b> Use the checkbox to turn the historic map on and off as needed when exploring.</li>
+                </ul>
+                <h4>Further Information</h4>
+                <p>At the bottom of the toolbar are three information buttons.</p>
+                <ul>
+                <li><b>The Story --</b> Click to learn about the historical novel, <i>Guardians of The Crossroads,</i>
+                which is set in December 1804 -- the very time which this historic map reveals.</li> 
+                <li><b>Map Info --</b> Click to see the original historic map and learn more about Strasbourg and this web map.</li>
+                <li><b>Comments --</b> Click to send any comments, feedback or questions you may have.</li> 
+                </ul>
+                <h4>Enjoy exploring the history of Strasbourg -- The Crossroads of Europe.</h4> 
+
+              </p>
+
+          </div>
+      </div>
+    </div> 
+    
+
+    <div id="map" class="map"></div>
+
+    <!-- For Simple Popup overlay: -->
+    <div id="popup" class="ol-popup">
+      <a href="#" id="popup-closer" class="ol-popup-closer"></a>
+      <div id="popup-content"></div>
+    </div>
+    
+  </body>
+</html>
